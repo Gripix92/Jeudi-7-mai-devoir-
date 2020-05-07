@@ -1,22 +1,18 @@
-ListesEleves = [["Yannis","Jeras","Aminata"],["Adem","Rémi","Kevindra"]]
-ListeTrié = []
+Eleves = [["Yannis","Jeras","Aminata"],["Adem","Rémi","Kevindra"]]
+L = []
 
-def Tri():
-    for sous_listes in ListesEleves:
+def Algorithme():
+    for sous_listes in Eleves:
         for items in sous_listes:
-            ListeTrié.append(items)
-    print(ListeTrié)
-
-def Dico():
-    Tri()
-    dico = {}
-    for itemsListeTrié in ListeTrié:
+            L.append(items)
+    dictionnaire = {}
+    for items in L:
         points = 0
-        for sous_listes in ListesEleves:
+        for sous_listes in Eleves:
             for itemsSousListes in sous_listes:
-                if itemsSousListes == itemsListeTrié:
-                    points += 100 - ( sous_listes.index(itemsSousListes) * 10 )
-        dico[itemsListeTrié] = str(int(points)) + " points"
-    print(dico)
+                if itemsSousListes == items:
+                    points += 10 / ( sous_listes.index(itemsSousListes) + 1 )
+        dictionnaire[items] = str(int(points)) + " points"
+    print(dictionnaire)
 
-Dico()
+Algorithme()
