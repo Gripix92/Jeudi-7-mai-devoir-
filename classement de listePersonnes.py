@@ -1,4 +1,4 @@
-ListesEleves = [["Jeras","Yannis","Adem"],["Aminata","Aya","Rémi"]]
+ListesEleves = [["Yannis","Jeras","Aminata"],["Adem","Rémi","Kevindra"]]
 ListeTrié = []
 
 def Tri():
